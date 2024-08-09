@@ -88,13 +88,13 @@ class FilmController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateFilmRequest $request, $id)
+    public function update(StoreFilmRequest $request, $id)
     {
-        // $posterPath = $request->file('poster')->store('images');
+        $posterPath = $request->file('poster')->store('images');
         $updateDetails = [
             'title'     => $request->title,
             'sinopsis'  => $request->sinopsis,
-            'poster'    => 'storage/images/h6.jpg',
+            'poster'    => $posterPath,
             'year'      => $request->year,
             'genre_id'  => $request->genre_id,
         ];
