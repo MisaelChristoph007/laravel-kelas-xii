@@ -1,0 +1,608 @@
+{
+	"info": {
+		"_postman_id": "554f6b55-a071-416a-9f0c-0c9a8088d8e4",
+		"name": "film-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13332619"
+	},
+	"item": [
+		{
+			"name": "add Movie",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var response = pm.response.json();\r",
+							"pm.environment.set(\"filmId\", response.data.id);\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "title",
+							"value": "Jaka Sembung 2",
+							"type": "text"
+						},
+						{
+							"key": "sinopsis",
+							"value": "Lorem ipsum dolor sit amet, consectetur adip Lorem ipsum dolor sit am Jaka Sembung issssss",
+							"type": "text"
+						},
+						{
+							"key": "year",
+							"value": "2022",
+							"type": "text"
+						},
+						{
+							"key": "genre_id",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "poster",
+							"type": "file",
+							"src": "postman-cloud:///1ef55a0d-87d1-48a0-9dec-0640b1410834"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{protocol}}://{{host}}:{{port}}/api/movies",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"api",
+						"movies"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "add Movie",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "Jaka Sembung 2",
+									"type": "text"
+								},
+								{
+									"key": "sinopsis",
+									"value": "Lorem ipsum dolor sit amet, consectetur adip Lorem ipsum dolor sit am Jaka Sembung issssss",
+									"type": "text"
+								},
+								{
+									"key": "year",
+									"value": "2022",
+									"type": "text"
+								},
+								{
+									"key": "genre_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "poster",
+									"type": "file",
+									"src": "postman-cloud:///1ef55a0d-87d1-48a0-9dec-0640b1410834"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{protocol}}://{{host}}:{{port}}/api/movies",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"movies"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 09 Aug 2024 01:22:14 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 09 Aug 2024 01:22:14 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.4"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": {\n        \"id\": 138,\n        \"title\": \"Jaka Sembung 2\",\n        \"sinopsis\": \"Lorem ipsum dolor sit amet, consectetur adip Lorem ipsum dolor sit am Jaka Sembung issssss\",\n        \"year\": \"2022\",\n        \"poster\": \"images/sA3VSOrOyej2ERJw6RNCaBauiAmdE4ZSYerCAt9r.jpg\",\n        \"genre\": \"Crime\"\n    },\n    \"message\": \"Film Create Successful\"\n}"
+				}
+			]
+		},
+		{
+			"name": "get All Movies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{protocol}}://{{host}}:{{port}}/api/movies",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"api",
+						"movies"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get All Movies",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{protocol}}://{{host}}:{{port}}/api/movies",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"movies"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 09 Aug 2024 01:22:28 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 09 Aug 2024 01:22:28 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.4"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"title\": \"Nine Leaves\",\n            \"sinopsis\": \"Ut voluptatem doloremque deserunt et. Praesentium corporis laudantium qui repudiandae magni eum. Id nihil non ipsum quis unde.\",\n            \"year\": 2022,\n            \"poster\": \"storage/images/c10.jpg\",\n            \"genre\": \"History\"\n        },\n        {\n            \"id\": 2,\n            \"title\": \"Billy Lynn's\",\n            \"sinopsis\": \"Ea sunt tempore earum. Facilis alias qui nobis. Tenetur et voluptas dolores omnis eligendi. Nostrum qui voluptas adipisci est ipsam architecto.\",\n            \"year\": 2021,\n            \"poster\": \"storage/images/c11.jpg\",\n            \"genre\": \"Biography\"\n        },\n        {\n            \"id\": 3,\n            \"title\": \"War on Everyone\",\n            \"sinopsis\": \"Temporibus corrupti dolores et. Odio voluptas numquam minus velit. Corporis quaerat placeat soluta quasi quo. Fuga cupiditate voluptas non. Enim facilis asperiores mollitia maiores impedit maiores.\",\n            \"year\": 2021,\n            \"poster\": \"storage/images/c12.jpg\",\n            \"genre\": \"Horror\"\n        },\n        {\n            \"id\": 4,\n            \"title\": \"Dirty Grandpa\",\n            \"sinopsis\": \"Recusandae totam sit cupiditate rerum et sit. Sit aspernatur voluptatem nihil esse. Dolore perferendis necessitatibus aliquam totam architecto sunt officiis rem. Officia id culpa quod sint deserunt.\",\n            \"year\": 2022,\n            \"poster\": \"storage/images/c2.jpg\",\n            \"genre\": \"War\"\n        },\n        {\n            \"id\": 5,\n            \"title\": \"Ride Along\",\n            \"sinopsis\": \"Ut aliquid enim qui sed qui. Vitae quia dolor aliquid id. Unde ratione fuga voluptatem at et dolor dicta. Adipisci ut qui rerum aut ut ut.\",\n            \"year\": 2022,\n            \"poster\": \"storage/images/c3.jpg\",\n            \"genre\": \"Romance\"\n        },\n        {\n            \"id\": 6,\n            \"title\": \"The Boss\",\n            \"sinopsis\": \"Nostrum minima non et qui et rerum aspernatur. Rerum neque consequatur tenetur. Consequatur fuga impedit numquam quo adipisci asperiores quidem. Tenetur ea ut odit autem corrupti illo.\",\n            \"year\": 2020,\n            \"poster\": \"storage/images/c4.jpg\",\n            \"genre\": \"Horror\"\n        },\n        {\n            \"id\": 7,\n            \"title\": \"Keanu\",\n            \"sinopsis\": \"Harum debitis ad sit omnis libero magni. Amet sunt eaque dolorem aut officiis delectus. Ut voluptas vitae consequatur numquam labore ut. Ipsam pariatur maiores officiis numquam.\",\n            \"year\": 2024,\n            \"poster\": \"storage/images/c5.jpg\",\n            \"genre\": \"Crime\"\n        },\n        {\n            \"id\": 8,\n            \"title\": \"Ice Age\",\n            \"sinopsis\": \"Ipsum et vel sit cupiditate. Architecto non assumenda molestiae in magnam ea aliquam.\",\n            \"year\": 2024,\n            \"poster\": \"storage/images/c6.jpg\",\n            \"genre\": \"Crime\"\n        },\n        {\n            \"id\": 9,\n            \"title\": \"Mike-Dave\",\n            \"sinopsis\": \"Ex expedita impedit ex qui expedita qui sequi iusto. Maiores vero ut eligendi mollitia. Ex voluptas qui provident modi rerum.\",\n            \"year\": 2022,\n            \"poster\": \"storage/images/c7.jpg\",\n            \"genre\": \"Action\"\n        },\n        {\n            \"id\": 10,\n            \"title\": \"Bad Moms\",\n            \"sinopsis\": \"Voluptatum quis aliquam doloremque et aspernatur. Sunt libero ut neque dolor et commodi non beatae.\",\n            \"year\": 2021,\n            \"poster\": \"storage/images/c8.jpg\",\n            \"genre\": \"Comedy\"\n        },\n        {\n            \"id\": 11,\n            \"title\": \"Barber Shop\",\n            \"sinopsis\": \"Ea et odit recusandae vero voluptatum nulla. Molestiae ipsam enim quo consequatur vel. Repudiandae ut impedit optio qui qui vel. Dolores autem animi molestiae aperiam. Enim aspernatur asperiores non.\",\n            \"year\": 2022,\n            \"poster\": \"storage/images/c9.jpg\",\n            \"genre\": \"Biography\"\n        },\n        {\n            \"id\": 12,\n            \"title\": \"Before I Wake\",\n            \"sinopsis\": \"Quaerat perspiciatis sit nisi veritatis alias nostrum. Et iure ipsa sed reprehenderit nam. Nobis libero mollitia distinctio nihil nemo harum.\",\n            \"year\": 2024,\n            \"poster\": \"storage/images/h1.jpg\",\n            \"genre\": \"Romance\"\n        },\n        {\n            \"id\": 13,\n            \"title\": \"The Neon Demon\",\n            \"sinopsis\": \"Quam voluptatem vitae culpa vero rerum autem. Distinctio vel exercitationem cupiditate distinctio quia enim qui. Quia adipisci expedita saepe dignissimos alias voluptates.\",\n            \"year\": 2020,\n            \"poster\": \"storage/images/h10.jpg\",\n            \"genre\": \"Horror\"\n        },\n        {\n            \"id\": 14,\n            \"title\": \"Morgan\",\n            \"sinopsis\": \"Minus illo quo vel dolor dolorem. Eum aut sed veniam nihil voluptas. Quia sint qui est consequatur suscipit. Est quidem aut quos quam et aut.\",\n            \"year\": 2020,\n            \"poster\": \"storage/images/h11.jpg\",\n            \"genre\": \"Family\"\n        },\n        {\n            \"id\": 15,\n            \"title\": \"The Belko Experiment\",\n            \"sinopsis\": \"Voluptates quo corrupti placeat saepe omnis odio. Distinctio nobis occaecati veniam nostrum. Quidem qui architecto molestias debitis omnis eaque.\",\n            \"year\": 2024,\n            \"poster\": \"storage/images/h12.jpg\",\n            \"genre\": \"Thriller\"\n        },\n        {\n            \"id\": 16,\n            \"title\": \"Don't Breathe\",\n            \"sinopsis\": \"Perspiciatis recusandae modi optio voluptatibus. Consequatur quia repudiandae ipsum et est consequatur. Aut rem maxime nostrum vel expedita vel. Quisquam in et nisi sed optio voluptatibus quam.\",\n            \"year\": 2020,\n            \"poster\": \"storage/images/h2.jpg\",\n            \"genre\": \"Biography\"\n        },\n        {\n            \"id\": 17,\n            \"title\": \"The Shallows\",\n            \"sinopsis\": \"Reiciendis doloribus deleniti dolorem. Rerum similique minus temporibus repudiandae tenetur sit. Et quia nisi vero dolorem cumque.\",\n            \"year\": 2023,\n            \"poster\": \"storage/images/h3.jpg\",\n            \"genre\": \"Documentary\"\n        },\n        {\n            \"id\": 18,\n            \"title\": \"Hush\",\n            \"sinopsis\": \"Non et et adipisci aliquam non alias. Accusantium quisquam repudiandae veniam ipsa sit. Sint et sed officiis rerum impedit voluptatibus labore. Est iure sequi et inventore.\",\n            \"year\": 2021,\n            \"poster\": \"storage/images/h4.jpg\",\n            \"genre\": \"Biography\"\n        },\n        {\n            \"id\": 19,\n            \"title\": \"Tell Me How I Die\",\n            \"sinopsis\": \"Asperiores dignissimos omnis commodi voluptatem magnam. Odio explicabo tenetur et dolor consectetur rerum quis. In voluptatem commodi consectetur quibusdam dolorem totam eos.\",\n            \"year\": 2021,\n            \"poster\": \"storage/images/h5.jpg\",\n            \"genre\": \"Horror\"\n        },\n        {\n            \"id\": 20,\n            \"title\": \"The Veil\",\n            \"sinopsis\": \"Beatae deleniti dolor omnis aut quas assumenda sequi. Dolor dicta voluptatum praesentium fuga. Nihil accusamus dignissimos labore qui iusto.\",\n            \"year\": 2021,\n            \"poster\": \"storage/images/h6.jpg\",\n            \"genre\": \"Fantasy\"\n        },\n        {\n            \"id\": 21,\n            \"title\": \"Dead 7\",\n            \"sinopsis\": \"Magnam tenetur fugiat mollitia accusamus aliquid repellendus. Quaerat harum quas cum dolores amet est. Iure corrupti enim ipsa aut.\",\n            \"year\": 2022,\n            \"poster\": \"storage/images/h7.jpg\",\n            \"genre\": \"Costume\"\n        },\n        {\n            \"id\": 22,\n            \"title\": \"Keep Watching\",\n            \"sinopsis\": \"Iste earum qui est. Et itaque ratione dolor expedita explicabo perferendis. Repellat hic et veniam culpa vero sit. Voluptatem reiciendis est harum ut neque. Ratione alias cumque maxime eum.\",\n            \"year\": 2023,\n            \"poster\": \"storage/images/h8.jpg\",\n            \"genre\": \"Costume\"\n        },\n        {\n            \"id\": 23,\n            \"title\": \"Holidays\",\n            \"sinopsis\": \"Nam rerum explicabo aut. Ea corporis id ut unde repudiandae sit. Molestias saepe soluta quos non. Veritatis occaecati aspernatur architecto molestiae assumenda sequi.\",\n            \"year\": 2024,\n            \"poster\": \"storage/images/h9.jpg\",\n            \"genre\": \"Sports\"\n        },\n        {\n            \"id\": 24,\n            \"title\": \"Don't Think Twice\",\n            \"sinopsis\": \"Facilis nobis et voluptas asperiores et corrupti. Totam voluptas doloribus magnam repellat et dolores. Voluptate repudiandae dolores ad sed.\",\n            \"year\": 2024,\n            \"poster\": \"storage/images/m10.jpg\",\n            \"genre\": \"Psychological\"\n        },\n        {\n            \"id\": 25,\n            \"title\": \"X-Men\",\n            \"sinopsis\": \"Laborum a odio consequatur minima error. Quo dolor veritatis odio eum beatae sunt modi. Porro voluptatem sunt rem rerum deserunt.\",\n            \"year\": 2024,\n            \"poster\": \"storage/images/m11.jpg\",\n            \"genre\": \"Fantasy\"\n        },\n        {\n            \"id\": 26,\n            \"title\": \"Greater\",\n            \"sinopsis\": \"Ut accusantium ut in ut aut. Impedit sapiente esse dolor qui ea accusantium pariatur. Harum modi est cum recusandae eum excepturi.\",\n            \"year\": 2024,\n            \"poster\": \"storage/images/m12.jpg\",\n            \"genre\": \"Musical\"\n        },\n        {\n            \"id\": 27,\n            \"title\": \"Citizen Soldier\",\n            \"sinopsis\": \"Voluptates non quod ex consequuntur occaecati harum magni. Animi voluptas voluptatem placeat doloribus ut. Explicabo qui corporis est voluptas ut quas aut. Et cumque consequatur nisi tempore.\",\n            \"year\": 2020,\n            \"poster\": \"storage/images/m13.jpg\",\n            \"genre\": \"Horror\"\n        },\n        {\n            \"id\": 28,\n            \"title\": \"God's Compass\",\n            \"sinopsis\": \"Id veritatis temporibus culpa doloremque ratione distinctio quo. Nemo ex id veniam nihil officia. Delectus fugit ex et provident veritatis incidunt in.\",\n            \"year\": 2021,\n            \"poster\": \"storage/images/m15.jpg\",\n            \"genre\": \"Sports\"\n        },\n        {\n            \"id\": 29,\n            \"title\": \"Peter\",\n            \"sinopsis\": \"Accusamus iusto accusantium velit. Rerum in asperiores ipsam dolores doloremque eum animi vitae.\",\n            \"year\": 2021,\n            \"poster\": \"storage/images/m17.jpg\",\n            \"genre\": \"Comedy\"\n        },\n        {\n            \"id\": 30,\n            \"title\": \"Light B/t Oceans\",\n            \"sinopsis\": \"Eos sed sunt natus voluptate dolore et. Facere aspernatur vel officia quas. Cupiditate adipisci similique voluptates autem aliquam.\",\n            \"year\": 2023,\n            \"poster\": \"storage/images/m7.jpg\",\n            \"genre\": \"Horror\"\n        },\n        {\n            \"id\": 31,\n            \"title\": \"The BFG\",\n            \"sinopsis\": \"Non reiciendis et consequuntur consequatur perspiciatis aut. In quam omnis voluptatem ipsa ratione.\",\n            \"year\": 2023,\n            \"poster\": \"storage/images/m8.jpg\",\n            \"genre\": \"Psychological\"\n        },\n        {\n            \"id\": 32,\n            \"title\": \"Central Intelligence\",\n            \"sinopsis\": \"Soluta fuga minus reiciendis odit. Rerum dolor beatae error. Tenetur quae voluptatibus ipsum perspiciatis sequi eius perspiciatis ea. In aspernatur tenetur assumenda quam voluptatibus.\",\n            \"year\": 2022,\n            \"poster\": \"storage/images/m9.jpg\",\n            \"genre\": \"Family\"\n        },\n        {\n            \"id\": 33,\n            \"title\": \"Nine Leaves\",\n            \"sinopsis\": \"Nihil exercitationem facilis consectetur dolorem. Aut sit aut praesentium non. Quis odio velit molestias ut laudantium. Eaque mollitia sunt ut dicta cumque.\",\n            \"year\": 2022,\n            \"poster\": \"storage/images/c10.jpg\",\n            \"genre\": \"Costume\"\n        },\n        {\n            \"id\": 34,\n            \"title\": \"Billy Lynn's\",\n            \"sinopsis\": \"Veniam molestiae eos qui dolor. Quam quo nulla voluptatibus eius minima. Qui rerum qui quia totam.\",\n            \"year\": 2022,\n            \"poster\": \"storage/images/c11.jpg\",\n            \"genre\": \"Adventure\"\n        },\n        {\n            \"id\": 35,\n            \"title\": \"War on Everyone\",\n            \"sinopsis\": \"Ullam dolor doloribus delectus non harum. Ratione ut enim ullam facilis quo quos sed. Expedita tempore amet illum.\",\n            \"year\": 2024,\n            \"poster\": \"storage/images/c12.jpg\",\n            \"genre\": \"Animation\"\n        },\n        {\n            \"id\": 36,\n            \"title\": \"Dirty Grandpa\",\n            \"sinopsis\": \"Sit qui esse aspernatur sit. Vel et sequi a et laborum sint. Quisquam ut quaerat et et quo esse architecto.\",\n            \"year\": 2024,\n            \"poster\": \"storage/images/c2.jpg\",\n            \"genre\": \"Psychological\"\n        },\n        {\n            \"id\": 37,\n            \"title\": \"Ride Along\",\n            \"sinopsis\": \"Nostrum debitis quidem molestias officia libero consectetur. Nam consectetur et eos sed asperiores eveniet aut. Est perspiciatis et minima qui vel dolores.\",\n            \"year\": 2021,\n            \"poster\": \"storage/images/c3.jpg\",\n            \"genre\": \"Comedy\"\n        },\n        {\n            \"id\": 38,\n            \"title\": \"The Boss\",\n            \"sinopsis\": \"Sequi veritatis odit et labore pariatur incidunt provident nihil. Quisquam nam quidem est et recusandae facere. Modi qui molestiae voluptatibus. Totam dolorem aut ut qui ut harum.\",\n            \"year\": 2024,\n            \"poster\": \"storage/images/c4.jpg\",\n            \"genre\": \"History\"\n        },\n        {\n            \"id\": 39,\n            \"title\": \"Keanu\",\n            \"sinopsis\": \"Nisi exercitationem eos voluptatibus quo voluptas. Occaecati non consequuntur nostrum dignissimos nostrum architecto itaque. Nulla quas est est doloribus veniam. Et officia consequatur qui.\",\n            \"year\": 2020,\n            \"poster\": \"storage/images/c5.jpg\",\n            \"genre\": \"Costume\"\n        },\n        {\n            \"id\": 40,\n            \"title\": \"Ice Age\",\n            \"sinopsis\": \"Perferendis laudantium commodi qui numquam. Inventore enim mollitia quis quia laudantium doloremque nam.\",\n            \"year\": 2023,\n            \"poster\": \"storage/images/c6.jpg\",\n            \"genre\": \"Fantasy\"\n        },\n        {\n            \"id\": 41,\n            \"title\": \"Mike-Dave\",\n            \"sinopsis\": \"Ducimus laudantium numquam provident consequatur. Eveniet illum libero numquam perspiciatis id explicabo in. Qui et aliquid corrupti quaerat est sequi nemo.\",\n            \"year\": 2021,\n            \"poster\": \"storage/images/c7.jpg\",\n            \"genre\": \"Romance\"\n        },\n        {\n            \"id\": 42,\n            \"title\": \"Bad Moms\",\n            \"sinopsis\": \"Perspiciatis labore earum qui iusto aut voluptas pariatur. Tenetur velit deleniti velit nisi. Quia tempore voluptas voluptates dolorem delectus.\",\n            \"year\": 2020,\n            \"poster\": \"storage/images/c8.jpg\",\n            \"genre\": \"Musical\"\n        },\n        {\n            \"id\": 43,\n            \"title\": \"Barber Shop\",\n            \"sinopsis\": \"Nemo non temporibus non fugit aut error velit. Facilis sunt iure nobis. Aut pariatur autem sint corrupti blanditiis vel unde.\",\n            \"year\": 2024,\n            \"poster\": \"storage/images/c9.jpg\",\n            \"genre\": \"Crime\"\n        },\n        {\n            \"id\": 44,\n            \"title\": \"Before I Wake\",\n            \"sinopsis\": \"Enim minus omnis perferendis dicta ipsa non rerum. Omnis voluptates rem magni explicabo nesciunt voluptatem rerum rem.\",\n            \"year\": 2021,\n            \"poster\": \"storage/images/h1.jpg\",\n            \"genre\": \"Costume\"\n        },\n        {\n            \"id\": 45,\n            \"title\": \"The Neon Demon\",\n            \"sinopsis\": \"Sit et dolores et similique iure sequi facere. Error omnis deleniti vel voluptatem qui. Voluptas quo aliquid exercitationem architecto ut.\",\n            \"year\": 2022,\n            \"poster\": \"storage/images/h10.jpg\",\n            \"genre\": \"Family\"\n        },\n        {\n            \"id\": 46,\n            \"title\": \"Morgan\",\n            \"sinopsis\": \"Sed soluta expedita aperiam aut necessitatibus. Est est labore blanditiis est qui aut voluptate. Omnis natus maiores consequatur ad repudiandae quis qui.\",\n            \"year\": 2024,\n            \"poster\": \"storage/images/h11.jpg\",\n            \"genre\": \"Adventure\"\n        },\n        {\n            \"id\": 47,\n            \"title\": \"The Belko Experiment\",\n            \"sinopsis\": \"Reprehenderit modi doloribus corrupti sunt. Consequuntur numquam necessitatibus modi eligendi omnis alias eligendi. Consequatur aut dolores quia id dolorem enim numquam.\",\n            \"year\": 2020,\n            \"poster\": \"storage/images/h12.jpg\",\n            \"genre\": \"War\"\n        },\n        {\n            \"id\": 48,\n            \"title\": \"Don't Breathe\",\n            \"sinopsis\": \"Et autem sunt ipsa et dolorem numquam dicta. Nobis quibusdam eius eius eum quae. Accusantium ipsa sapiente aliquid omnis amet ipsa. Dolores placeat quis iste voluptates omnis vitae qui.\",\n            \"year\": 2024,\n            \"poster\": \"storage/images/h2.jpg\",\n            \"genre\": \"Thriller\"\n        },\n        {\n            \"id\": 49,\n            \"title\": \"The Shallows\",\n            \"sinopsis\": \"Corrupti fuga recusandae fugit voluptas sint nihil. Et modi adipisci reiciendis dolor. Aut dolor et rerum earum. Accusamus ut occaecati excepturi commodi maxime est voluptates.\",\n            \"year\": 2024,\n            \"poster\": \"storage/images/h3.jpg\",\n            \"genre\": \"Action\"\n        },\n        {\n            \"id\": 50,\n            \"title\": \"Hush\",\n            \"sinopsis\": \"Provident et rerum dolor fugiat. Illo et earum et accusamus voluptas id tenetur. Cupiditate laborum dicta autem ullam.\",\n            \"year\": 2023,\n            \"poster\": \"storage/images/h4.jpg\",\n            \"genre\": \"Romance\"\n        },\n        {\n            \"id\": 51,\n            \"title\": \"Tell Me How I Die\",\n            \"sinopsis\": \"Sunt eos nihil rerum enim sed enim soluta facilis. Omnis mollitia ut rerum impedit qui. Vitae aliquid qui nihil fugit tenetur voluptates.\",\n            \"year\": 2023,\n            \"poster\": \"storage/images/h5.jpg\",\n            \"genre\": \"Romance\"\n        },\n        {\n            \"id\": 52,\n            \"title\": \"The Veil\",\n            \"sinopsis\": \"Dicta totam odit eaque amet. Officiis id quis dicta. Velit sit cum quam cupiditate laboriosam.\",\n            \"year\": 2024,\n            \"poster\": \"storage/images/h6.jpg\",\n            \"genre\": \"Adventure\"\n        },\n        {\n            \"id\": 53,\n            \"title\": \"Dead 7\",\n            \"sinopsis\": \"Ab nesciunt ad sint expedita provident asperiores quia. Atque sunt nihil esse nihil iure deleniti minima. Alias reiciendis et magnam dolor.\",\n            \"year\": 2023,\n            \"poster\": \"storage/images/h7.jpg\",\n            \"genre\": \"Costume\"\n        },\n        {\n            \"id\": 54,\n            \"title\": \"Keep Watching\",\n            \"sinopsis\": \"Sit voluptatem aut illum eveniet similique in. Quo perferendis omnis omnis quisquam et voluptas nisi aut. Aut qui veniam qui impedit architecto molestiae explicabo.\",\n            \"year\": 2022,\n            \"poster\": \"storage/images/h8.jpg\",\n            \"genre\": \"War\"\n        },\n        {\n            \"id\": 55,\n            \"title\": \"Holidays\",\n            \"sinopsis\": \"Non dolores nesciunt iusto ab id. Mollitia alias voluptatem est blanditiis quis. Enim molestias quaerat veritatis unde labore. Est repudiandae doloribus cumque ipsum.\",\n            \"year\": 2020,\n            \"poster\": \"storage/images/h9.jpg\",\n            \"genre\": \"Crime\"\n        },\n        {\n            \"id\": 56,\n            \"title\": \"Don't Think Twice\",\n            \"sinopsis\": \"Ducimus deserunt quibusdam sunt aut. Quaerat architecto neque labore vitae voluptatem ducimus. Magni explicabo enim eum consequuntur.\",\n            \"year\": 2024,\n            \"poster\": \"storage/images/m10.jpg\",\n            \"genre\": \"Sports\"\n        },\n        {\n            \"id\": 57,\n            \"title\": \"X-Men\",\n            \"sinopsis\": \"Dolores velit reprehenderit et consequatur et similique. Molestiae id rerum qui at. Ut enim autem qui voluptatibus voluptatem.\",\n            \"year\": 2024,\n            \"poster\": \"storage/images/m11.jpg\",\n            \"genre\": \"Horror\"\n        },\n        {\n            \"id\": 58,\n            \"title\": \"Greater\",\n            \"sinopsis\": \"Facere dolorem et distinctio et nihil facere perspiciatis. Ipsam doloribus et deserunt quod. Ea nesciunt quae asperiores. Minus cum porro porro quidem voluptatem. Sequi quod quas aut iste voluptas.\",\n            \"year\": 2020,\n            \"poster\": \"storage/images/m12.jpg\",\n            \"genre\": \"Family\"\n        },\n        {\n            \"id\": 59,\n            \"title\": \"Citizen Soldier\",\n            \"sinopsis\": \"Voluptatem laborum eos velit velit esse. Quae consequatur in ut eaque atque eum. Nostrum vero cumque quisquam similique sapiente voluptate.\",\n            \"year\": 2021,\n            \"poster\": \"storage/images/m13.jpg\",\n            \"genre\": \"Drama\"\n        },\n        {\n            \"id\": 60,\n            \"title\": \"God's Compass\",\n            \"sinopsis\": \"Et vel inventore explicabo. Consequatur adipisci dignissimos id suscipit praesentium voluptates voluptatum. Commodi nemo ducimus est debitis amet animi dolor.\",\n            \"year\": 2022,\n            \"poster\": \"storage/images/m15.jpg\",\n            \"genre\": \"Thriller\"\n        },\n        {\n            \"id\": 61,\n            \"title\": \"Peter\",\n            \"sinopsis\": \"Saepe aut ut autem dolore et. Ut officia temporibus quae minus ipsum et magni. Dolorum autem sit et nesciunt alias eum aut.\",\n            \"year\": 2024,\n            \"poster\": \"storage/images/m17.jpg\",\n            \"genre\": \"Adventure\"\n        },\n        {\n            \"id\": 62,\n            \"title\": \"Light B/t Oceans\",\n            \"sinopsis\": \"Et mollitia incidunt ea et. Quis et sed et id nesciunt consequatur repellendus. Praesentium quod impedit reprehenderit sunt est.\",\n            \"year\": 2023,\n            \"poster\": \"storage/images/m7.jpg\",\n            \"genre\": \"Thriller\"\n        },\n        {\n            \"id\": 63,\n            \"title\": \"The BFG\",\n            \"sinopsis\": \"Consequuntur reiciendis eius qui aut. Dolorem est rem veritatis fugiat pariatur. Tempore et quasi qui in voluptas repudiandae non. Aut aliquid harum unde ullam sequi deleniti a.\",\n            \"year\": 2022,\n            \"poster\": \"storage/images/m8.jpg\",\n            \"genre\": \"Action\"\n        },\n        {\n            \"id\": 64,\n            \"title\": \"Central Intelligence\",\n            \"sinopsis\": \"Aliquam architecto ex aut nihil sit recusandae rerum. Dolor dignissimos mollitia quis.\",\n            \"year\": 2020,\n            \"poster\": \"storage/images/m9.jpg\",\n            \"genre\": \"Romance\"\n        },\n        {\n            \"id\": 65,\n            \"title\": \"Nine Leaves\",\n            \"sinopsis\": \"Nemo unde qui consequatur. Consequatur enim excepturi autem est perspiciatis deserunt temporibus consequuntur. Itaque nemo sint pariatur harum sint velit.\",\n            \"year\": 2023,\n            \"poster\": \"storage/images/c10.jpg\",\n            \"genre\": \"Costume\"\n        },\n        {\n            \"id\": 66,\n            \"title\": \"Billy Lynn's\",\n            \"sinopsis\": \"Pariatur ab voluptatibus voluptate ipsa. Non debitis quia nulla expedita ab sed ut. Amet et voluptatem veritatis doloremque qui.\",\n            \"year\": 2020,\n            \"poster\": \"storage/images/c11.jpg\",\n            \"genre\": \"History\"\n        },\n        {\n            \"id\": 67,\n            \"title\": \"War on Everyone\",\n            \"sinopsis\": \"Dolor omnis aut vel sit sit. Vitae iure omnis non consequatur nulla est. Consequuntur voluptatem laudantium quam cupiditate autem saepe. Illum fugit ut dolor voluptatibus corrupti voluptatem non.\",\n            \"year\": 2024,\n            \"poster\": \"storage/images/c12.jpg\",\n            \"genre\": \"War\"\n        },\n        {\n            \"id\": 68,\n            \"title\": \"Dirty Grandpa\",\n            \"sinopsis\": \"Repellendus ipsum et modi animi nesciunt ea. Autem quos quis et vel molestiae placeat voluptatem. Atque et debitis sed iure delectus. Molestias nesciunt velit mollitia et.\",\n            \"year\": 2020,\n            \"poster\": \"storage/images/c2.jpg\",\n            \"genre\": \"Adventure\"\n        },\n        {\n            \"id\": 69,\n            \"title\": \"Ride Along\",\n            \"sinopsis\": \"Numquam qui sit qui quasi. Qui necessitatibus culpa quaerat ex deleniti architecto.\",\n            \"year\": 2023,\n            \"poster\": \"storage/images/c3.jpg\",\n            \"genre\": \"Comedy\"\n        },\n        {\n            \"id\": 70,\n            \"title\": \"The Boss\",\n            \"sinopsis\": \"Nihil quos reprehenderit quia incidunt. Occaecati aut vel aut vero. Eveniet libero ex distinctio. Temporibus ea dignissimos itaque unde aut.\",\n            \"year\": 2022,\n            \"poster\": \"storage/images/c4.jpg\",\n            \"genre\": \"Costume\"\n        },\n        {\n            \"id\": 71,\n            \"title\": \"Keanu\",\n            \"sinopsis\": \"Accusantium dolor enim ut dicta. Quibusdam eos ipsam placeat aspernatur id voluptas numquam exercitationem. Expedita quasi dolore quod quia. Quia enim tempora optio exercitationem rerum est.\",\n            \"year\": 2023,\n            \"poster\": \"storage/images/c5.jpg\",\n            \"genre\": \"Psychological\"\n        },\n        {\n            \"id\": 72,\n            \"title\": \"Ice Age\",\n            \"sinopsis\": \"Officiis sed non accusamus dignissimos. Deleniti eaque qui sapiente et aut esse asperiores laudantium. Molestias amet eos expedita adipisci aperiam iste.\",\n            \"year\": 2020,\n            \"poster\": \"storage/images/c6.jpg\",\n            \"genre\": \"Biography\"\n        },\n        {\n            \"id\": 73,\n            \"title\": \"Mike-Dave\",\n            \"sinopsis\": \"Necessitatibus commodi dolorum beatae non illo animi sint. Aut incidunt sapiente iste dolor dolorem. Laudantium earum rerum cum omnis minus molestias.\",\n            \"year\": 2024,\n            \"poster\": \"storage/images/c7.jpg\",\n            \"genre\": \"Psychological\"\n        },\n        {\n            \"id\": 74,\n            \"title\": \"Bad Moms\",\n            \"sinopsis\": \"Et quo sit et sit numquam ea dolores. Nihil vel nemo enim. Officiis repellendus sed amet sapiente rerum voluptatibus at nesciunt. Porro hic dicta ut labore assumenda occaecati eligendi et.\",\n            \"year\": 2022,\n            \"poster\": \"storage/images/c8.jpg\",\n            \"genre\": \"Thriller\"\n        },\n        {\n            \"id\": 75,\n            \"title\": \"Barber Shop\",\n            \"sinopsis\": \"At at rerum non minus. Sed rerum sapiente et doloribus rem ut exercitationem. Dignissimos itaque voluptas officiis earum ut quia.\",\n            \"year\": 2024,\n            \"poster\": \"storage/images/c9.jpg\",\n            \"genre\": \"Sports\"\n        },\n        {\n            \"id\": 76,\n            \"title\": \"Before I Wake\",\n            \"sinopsis\": \"Officiis ea omnis est corrupti. Quia qui qui tenetur qui voluptatem molestias. Corrupti dolore perspiciatis hic.\",\n            \"year\": 2021,\n            \"poster\": \"storage/images/h1.jpg\",\n            \"genre\": \"Biography\"\n        },\n        {\n            \"id\": 77,\n            \"title\": \"The Neon Demon\",\n            \"sinopsis\": \"Sint doloremque totam id ad laboriosam optio qui neque. Eum quis et sed ea maiores deleniti. Voluptates cupiditate dolor itaque velit similique ipsam sapiente. Et ipsam placeat occaecati possimus.\",\n            \"year\": 2024,\n            \"poster\": \"storage/images/h10.jpg\",\n            \"genre\": \"Crime\"\n        },\n        {\n            \"id\": 78,\n            \"title\": \"Morgan\",\n            \"sinopsis\": \"Accusantium aut numquam hic quod ut. Ea ad adipisci aperiam dicta. Minima ullam quam non aut quidem qui qui dicta. In nemo architecto qui aperiam.\",\n            \"year\": 2021,\n            \"poster\": \"storage/images/h11.jpg\",\n            \"genre\": \"Crime\"\n        },\n        {\n            \"id\": 79,\n            \"title\": \"The Belko Experiment\",\n            \"sinopsis\": \"Non et id dolores voluptatum qui temporibus similique voluptatem. Cumque tempore eum sunt fugit hic. Nostrum aperiam optio ea voluptatem iure.\",\n            \"year\": 2024,\n            \"poster\": \"storage/images/h12.jpg\",\n            \"genre\": \"Costume\"\n        },\n        {\n            \"id\": 80,\n            \"title\": \"Don't Breathe\",\n            \"sinopsis\": \"Quia deserunt deserunt sed officiis repudiandae omnis iure. Soluta hic similique sapiente consectetur possimus. Aut necessitatibus ad rem aut quidem ut.\",\n            \"year\": 2024,\n            \"poster\": \"storage/images/h2.jpg\",\n            \"genre\": \"Musical\"\n        },\n        {\n            \"id\": 81,\n            \"title\": \"The Shallows\",\n            \"sinopsis\": \"Sint quibusdam dolor doloremque eos sint adipisci. Rerum rerum est est necessitatibus provident quasi. Dolores autem consequuntur quia eum facere et nihil. Ut ullam aspernatur itaque qui ut.\",\n            \"year\": 2021,\n            \"poster\": \"storage/images/h3.jpg\",\n            \"genre\": \"Fantasy\"\n        },\n        {\n            \"id\": 82,\n            \"title\": \"Hush\",\n            \"sinopsis\": \"Ipsam illum omnis molestias ut in deserunt. Magni placeat quia sit minus quidem. Rerum et et aut fugiat quia esse corrupti omnis. Iusto quidem cumque error voluptates et a eveniet.\",\n            \"year\": 2021,\n            \"poster\": \"storage/images/h4.jpg\",\n            \"genre\": \"Fantasy\"\n        },\n        {\n            \"id\": 83,\n            \"title\": \"Tell Me How I Die\",\n            \"sinopsis\": \"Beatae et aspernatur dolores quis sed aut. Sint ducimus impedit vitae similique quod.\",\n            \"year\": 2024,\n            \"poster\": \"storage/images/h5.jpg\",\n            \"genre\": \"Animation\"\n        },\n        {\n            \"id\": 84,\n            \"title\": \"The Veil\",\n            \"sinopsis\": \"Voluptas ea earum rerum illo. Vero eius quasi beatae id. Aliquid autem consectetur ad vel corrupti omnis. Eum porro et ducimus debitis voluptatem amet voluptatibus.\",\n            \"year\": 2021,\n            \"poster\": \"storage/images/h6.jpg\",\n            \"genre\": \"Costume\"\n        },\n        {\n            \"id\": 85,\n            \"title\": \"Dead 7\",\n            \"sinopsis\": \"Voluptas temporibus non voluptatibus. Rerum harum earum rerum labore iure laboriosam ipsum.\",\n            \"year\": 2021,\n            \"poster\": \"storage/images/h7.jpg\",\n            \"genre\": \"Fantasy\"\n        },\n        {\n            \"id\": 86,\n            \"title\": \"Keep Watching\",\n            \"sinopsis\": \"Voluptatem delectus et sint sit aperiam asperiores. Praesentium accusamus nemo optio iusto quasi nemo. Perspiciatis voluptates labore sunt quia repellat et.\",\n            \"year\": 2021,\n            \"poster\": \"storage/images/h8.jpg\",\n            \"genre\": \"Costume\"\n        },\n        {\n            \"id\": 87,\n            \"title\": \"Holidays\",\n            \"sinopsis\": \"Est voluptas voluptate mollitia. Veniam alias impedit nesciunt. Voluptatum rerum eum minima ut.\",\n            \"year\": 2021,\n            \"poster\": \"storage/images/h9.jpg\",\n            \"genre\": \"Thriller\"\n        },\n        {\n            \"id\": 88,\n            \"title\": \"Don't Think Twice\",\n            \"sinopsis\": \"Eum iste quia repellendus est nulla maxime. Eaque ab voluptatem ut dignissimos nam neque. Nesciunt quisquam est ad deleniti.\",\n            \"year\": 2020,\n            \"poster\": \"storage/images/m10.jpg\",\n            \"genre\": \"Adventure\"\n        },\n        {\n            \"id\": 89,\n            \"title\": \"X-Men\",\n            \"sinopsis\": \"Architecto similique a non perspiciatis impedit. Fuga maxime praesentium eligendi praesentium. Voluptatem explicabo deserunt et excepturi qui commodi error.\",\n            \"year\": 2023,\n            \"poster\": \"storage/images/m11.jpg\",\n            \"genre\": \"Psychological\"\n        },\n        {\n            \"id\": 90,\n            \"title\": \"Greater\",\n            \"sinopsis\": \"Et similique delectus unde dolorum provident eligendi. Distinctio eligendi itaque ut quis dicta id. Officiis nisi illo ratione ut vel aut quisquam.\",\n            \"year\": 2021,\n            \"poster\": \"storage/images/m12.jpg\",\n            \"genre\": \"Musical\"\n        },\n        {\n            \"id\": 91,\n            \"title\": \"Citizen Soldier\",\n            \"sinopsis\": \"Provident quod quos dicta sed voluptatem vel itaque consequatur. Voluptatem ea quasi sint quo minus. Excepturi magni optio tenetur omnis. Necessitatibus quam dolorum non.\",\n            \"year\": 2023,\n            \"poster\": \"storage/images/m13.jpg\",\n            \"genre\": \"Romance\"\n        },\n        {\n            \"id\": 92,\n            \"title\": \"God's Compass\",\n            \"sinopsis\": \"Assumenda consectetur eum natus dolorem expedita nam doloremque. Omnis qui et autem officia saepe. Soluta ea deserunt omnis nulla. Cumque tenetur at nam ducimus veniam.\",\n            \"year\": 2022,\n            \"poster\": \"storage/images/m15.jpg\",\n            \"genre\": \"Biography\"\n        },\n        {\n            \"id\": 93,\n            \"title\": \"Peter\",\n            \"sinopsis\": \"Dolores tenetur nesciunt quos totam dolor. Illum sit sunt est vel tempora non saepe. Voluptatem assumenda facere facere eligendi.\",\n            \"year\": 2022,\n            \"poster\": \"storage/images/m17.jpg\",\n            \"genre\": \"Animation\"\n        },\n        {\n            \"id\": 94,\n            \"title\": \"Light B/t Oceans\",\n            \"sinopsis\": \"Ut blanditiis consequatur sint nam. Temporibus eligendi dolorem quibusdam ducimus quo ut nulla laborum.\",\n            \"year\": 2020,\n            \"poster\": \"storage/images/m7.jpg\",\n            \"genre\": \"Comedy\"\n        },\n        {\n            \"id\": 95,\n            \"title\": \"The BFG\",\n            \"sinopsis\": \"Est nostrum soluta numquam rerum quia id modi. Ducimus facilis voluptas nihil eius quam sit id. Dolores molestiae cum tempore qui soluta officiis aut est.\",\n            \"year\": 2020,\n            \"poster\": \"storage/images/m8.jpg\",\n            \"genre\": \"Family\"\n        },\n        {\n            \"id\": 96,\n            \"title\": \"Central Intelligence\",\n            \"sinopsis\": \"Commodi cum ea nobis quaerat repellendus. Porro distinctio qui iusto cumque ad accusantium aut tempore. Quo voluptate est non sed qui est eos. Qui eos praesentium quae occaecati quam sed tempore.\",\n            \"year\": 2021,\n            \"poster\": \"storage/images/m9.jpg\",\n            \"genre\": \"Family\"\n        },\n        {\n            \"id\": 97,\n            \"title\": \"Nine Leaves\",\n            \"sinopsis\": \"Atque suscipit consequatur illo expedita dolorum officiis omnis quia. Et similique aut dolor qui. Voluptates odit omnis ut adipisci qui ut voluptatem nihil.\",\n            \"year\": 2024,\n            \"poster\": \"storage/images/c10.jpg\",\n            \"genre\": \"Horror\"\n        },\n        {\n            \"id\": 98,\n            \"title\": \"Billy Lynn's\",\n            \"sinopsis\": \"Est nobis aut esse dolore omnis dicta. Animi neque incidunt aperiam. Eius voluptatum nemo velit quo at consequatur cupiditate. Harum quibusdam rerum sapiente aut exercitationem ut.\",\n            \"year\": 2020,\n            \"poster\": \"storage/images/c11.jpg\",\n            \"genre\": \"Action\"\n        },\n        {\n            \"id\": 99,\n            \"title\": \"War on Everyone\",\n            \"sinopsis\": \"Eveniet possimus et at est et repellendus. Similique consectetur libero excepturi. Iure quisquam nobis quia cum necessitatibus debitis. Ea aut nemo corporis consectetur impedit eos.\",\n            \"year\": 2023,\n            \"poster\": \"storage/images/c12.jpg\",\n            \"genre\": \"Drama\"\n        },\n        {\n            \"id\": 100,\n            \"title\": \"Dirty Grandpa\",\n            \"sinopsis\": \"Facere exercitationem quisquam commodi autem iste. Animi tenetur ut quam tempora optio. Vel et dignissimos dolores voluptates quasi quia id aut. Laborum ipsa dolorem quos omnis iste.\",\n            \"year\": 2020,\n            \"poster\": \"storage/images/c2.jpg\",\n            \"genre\": \"Family\"\n        },\n        {\n            \"id\": 101,\n            \"title\": \"Ride Along\",\n            \"sinopsis\": \"Aut sint accusamus neque molestiae dicta repudiandae. Accusantium expedita magni qui occaecati quis. Animi quod consectetur molestiae sint. Est quod ducimus quo nemo officia.\",\n            \"year\": 2023,\n            \"poster\": \"storage/images/c3.jpg\",\n            \"genre\": \"Psychological\"\n        },\n        {\n            \"id\": 102,\n            \"title\": \"The Boss\",\n            \"sinopsis\": \"Corporis sed quia cum corporis et voluptatem est. Vel autem perferendis soluta dolore maxime dolores velit sapiente. Quo ut blanditiis consectetur doloribus. Aliquam quasi est expedita.\",\n            \"year\": 2020,\n            \"poster\": \"storage/images/c4.jpg\",\n            \"genre\": \"Crime\"\n        },\n        {\n            \"id\": 103,\n            \"title\": \"Keanu\",\n            \"sinopsis\": \"Ullam architecto magni sunt et eius veniam. Sunt iste error ratione aut modi porro. Velit aliquam dolor ab velit atque qui molestiae. Vel magnam et quas nostrum nobis.\",\n            \"year\": 2023,\n            \"poster\": \"storage/images/c5.jpg\",\n            \"genre\": \"Animation\"\n        },\n        {\n            \"id\": 104,\n            \"title\": \"Ice Age\",\n            \"sinopsis\": \"Consequatur id ea vitae est et quae. Dolor beatae et alias odio enim. Laborum sed corporis aperiam itaque nostrum. Unde veniam quia et explicabo reprehenderit eum eos.\",\n            \"year\": 2023,\n            \"poster\": \"storage/images/c6.jpg\",\n            \"genre\": \"Documentary\"\n        },\n        {\n            \"id\": 105,\n            \"title\": \"Mike-Dave\",\n            \"sinopsis\": \"Labore et quo aliquam labore sapiente cum. Impedit voluptas error velit dolorum voluptatem magni. Facilis similique enim eum culpa suscipit dolorem.\",\n            \"year\": 2020,\n            \"poster\": \"storage/images/c7.jpg\",\n            \"genre\": \"Horror\"\n        },\n        {\n            \"id\": 106,\n            \"title\": \"Bad Moms\",\n            \"sinopsis\": \"Quia quae inventore voluptatum ipsa. Aut dolorem esse voluptatem sed assumenda ad sed. Eaque id quasi molestiae ducimus. Sit accusamus dolorem maiores.\",\n            \"year\": 2024,\n            \"poster\": \"storage/images/c8.jpg\",\n            \"genre\": \"Costume\"\n        },\n        {\n            \"id\": 107,\n            \"title\": \"Barber Shop\",\n            \"sinopsis\": \"A et natus odio. Asperiores sint odit earum quos asperiores eius. Ut repellat animi voluptatem iste cumque.\",\n            \"year\": 2021,\n            \"poster\": \"storage/images/c9.jpg\",\n            \"genre\": \"Romance\"\n        },\n        {\n            \"id\": 108,\n            \"title\": \"Before I Wake\",\n            \"sinopsis\": \"Perspiciatis ea quia id quia maxime. Numquam ut sed explicabo. Sit placeat est iure debitis.\",\n            \"year\": 2020,\n            \"poster\": \"storage/images/h1.jpg\",\n            \"genre\": \"History\"\n        },\n        {\n            \"id\": 109,\n            \"title\": \"The Neon Demon\",\n            \"sinopsis\": \"Quod nihil non praesentium quaerat. Aut placeat quia voluptatem vel possimus vero a. Sapiente deleniti et vitae ducimus. Laudantium in ipsam labore beatae et reprehenderit accusantium.\",\n            \"year\": 2021,\n            \"poster\": \"storage/images/h10.jpg\",\n            \"genre\": \"Fantasy\"\n        },\n        {\n            \"id\": 110,\n            \"title\": \"Morgan\",\n            \"sinopsis\": \"Et distinctio minus asperiores nostrum excepturi ut totam commodi. Aut et fugiat recusandae illo tenetur enim. Qui eligendi tempore quo.\",\n            \"year\": 2021,\n            \"poster\": \"storage/images/h11.jpg\",\n            \"genre\": \"Family\"\n        },\n        {\n            \"id\": 111,\n            \"title\": \"The Belko Experiment\",\n            \"sinopsis\": \"Dolor ea autem sint sed voluptatum qui. Est minus totam laudantium numquam occaecati. Culpa deserunt officia quidem amet enim sit iusto. Sunt dolor ut excepturi quisquam.\",\n            \"year\": 2023,\n            \"poster\": \"storage/images/h12.jpg\",\n            \"genre\": \"Costume\"\n        },\n        {\n            \"id\": 112,\n            \"title\": \"Don't Breathe\",\n            \"sinopsis\": \"Consequatur molestiae esse impedit non nulla at. Asperiores maxime voluptatem cum sit maiores dolores. Non maiores ipsa ipsa et. Placeat at maiores sint.\",\n            \"year\": 2024,\n            \"poster\": \"storage/images/h2.jpg\",\n            \"genre\": \"Drama\"\n        },\n        {\n            \"id\": 113,\n            \"title\": \"The Shallows\",\n            \"sinopsis\": \"Aut deleniti dolore ab laboriosam explicabo cumque nisi. Nihil tempora omnis earum. Ratione error dignissimos cumque consequatur facere consequuntur.\",\n            \"year\": 2022,\n            \"poster\": \"storage/images/h3.jpg\",\n            \"genre\": \"Fantasy\"\n        },\n        {\n            \"id\": 114,\n            \"title\": \"Hush\",\n            \"sinopsis\": \"Odio earum officiis quibusdam. Velit eius sit cum. Non aut accusantium nesciunt non excepturi rerum. Molestias qui ut adipisci aut rerum cumque. Iste aut laudantium aut aut eos.\",\n            \"year\": 2021,\n            \"poster\": \"storage/images/h4.jpg\",\n            \"genre\": \"Biography\"\n        },\n        {\n            \"id\": 115,\n            \"title\": \"Tell Me How I Die\",\n            \"sinopsis\": \"Qui architecto quae sint repellat. Voluptatem corporis sint ut sint.\",\n            \"year\": 2024,\n            \"poster\": \"storage/images/h5.jpg\",\n            \"genre\": \"Action\"\n        },\n        {\n            \"id\": 116,\n            \"title\": \"The Veil\",\n            \"sinopsis\": \"Velit omnis nisi qui perferendis neque. Enim temporibus odit laboriosam quia explicabo. Nihil ex explicabo quia sequi nemo dignissimos rerum. Vero molestias minus necessitatibus eaque et.\",\n            \"year\": 2021,\n            \"poster\": \"storage/images/h6.jpg\",\n            \"genre\": \"Horror\"\n        },\n        {\n            \"id\": 117,\n            \"title\": \"Dead 7\",\n            \"sinopsis\": \"Nisi alias recusandae odio natus. Adipisci dolores harum dolorem molestiae sit veniam sunt. Sapiente iusto suscipit qui doloremque. Autem est voluptas veniam inventore.\",\n            \"year\": 2021,\n            \"poster\": \"storage/images/h7.jpg\",\n            \"genre\": \"Psychological\"\n        },\n        {\n            \"id\": 118,\n            \"title\": \"Keep Watching\",\n            \"sinopsis\": \"Et earum in et exercitationem quo voluptatem rerum. Voluptate iste ut laboriosam earum tenetur voluptatum. Veritatis numquam non est possimus.\",\n            \"year\": 2020,\n            \"poster\": \"storage/images/h8.jpg\",\n            \"genre\": \"Action\"\n        },\n        {\n            \"id\": 119,\n            \"title\": \"Holidays\",\n            \"sinopsis\": \"Unde dignissimos quis illo magnam enim. Quod quo inventore voluptatibus deserunt quia inventore. Aut accusamus nulla et. Qui nisi distinctio provident temporibus repellendus.\",\n            \"year\": 2020,\n            \"poster\": \"storage/images/h9.jpg\",\n            \"genre\": \"Adventure\"\n        },\n        {\n            \"id\": 120,\n            \"title\": \"Don't Think Twice\",\n            \"sinopsis\": \"Id ipsam perferendis occaecati deserunt quis ea sed. Earum dolorum aut ut aliquid. Iusto quas sed voluptatum neque vel necessitatibus consequatur.\",\n            \"year\": 2020,\n            \"poster\": \"storage/images/m10.jpg\",\n            \"genre\": \"War\"\n        },\n        {\n            \"id\": 121,\n            \"title\": \"X-Men\",\n            \"sinopsis\": \"Nesciunt distinctio omnis numquam aut voluptas enim. Ipsam eos mollitia iure debitis. Molestiae optio molestias debitis eligendi quis ullam. Nostrum accusamus consequatur nesciunt.\",\n            \"year\": 2022,\n            \"poster\": \"storage/images/m11.jpg\",\n            \"genre\": \"Psychological\"\n        },\n        {\n            \"id\": 122,\n            \"title\": \"Greater\",\n            \"sinopsis\": \"Modi sapiente quia occaecati sunt enim. Blanditiis iure earum ea dolorum ea deserunt id. Error dolorum ut necessitatibus iste accusantium fugiat ut.\",\n            \"year\": 2021,\n            \"poster\": \"storage/images/m12.jpg\",\n            \"genre\": \"Animation\"\n        },\n        {\n            \"id\": 123,\n            \"title\": \"Citizen Soldier\",\n            \"sinopsis\": \"Nihil sequi ut ut sapiente non ea iusto. Consequuntur modi ratione debitis distinctio. Debitis repellendus provident molestias impedit fugiat in quaerat. Ut ipsam fugiat deserunt.\",\n            \"year\": 2022,\n            \"poster\": \"storage/images/m13.jpg\",\n            \"genre\": \"Family\"\n        },\n        {\n            \"id\": 124,\n            \"title\": \"God's Compass\",\n            \"sinopsis\": \"Molestiae excepturi quaerat sit ad aliquam. Nihil cum neque sed. Exercitationem vero autem neque at quibusdam.\",\n            \"year\": 2020,\n            \"poster\": \"storage/images/m15.jpg\",\n            \"genre\": \"Psychological\"\n        },\n        {\n            \"id\": 125,\n            \"title\": \"Peter\",\n            \"sinopsis\": \"Magni consequatur voluptatem deleniti perferendis. Nemo qui ut sit et excepturi dicta. Vel ut expedita sint quam.\",\n            \"year\": 2021,\n            \"poster\": \"storage/images/m17.jpg\",\n            \"genre\": \"History\"\n        },\n        {\n            \"id\": 126,\n            \"title\": \"Light B/t Oceans\",\n            \"sinopsis\": \"Sunt nulla nesciunt earum culpa aut id a. Aut aperiam cupiditate voluptatem neque inventore expedita. Necessitatibus officia soluta et ut ratione.\",\n            \"year\": 2021,\n            \"poster\": \"storage/images/m7.jpg\",\n            \"genre\": \"Comedy\"\n        },\n        {\n            \"id\": 127,\n            \"title\": \"The BFG\",\n            \"sinopsis\": \"Consectetur sit ut vitae. Quia commodi corrupti eum. Sed et quia minus et non ut voluptatum. Voluptatibus delectus eos dolorem.\",\n            \"year\": 2023,\n            \"poster\": \"storage/images/m8.jpg\",\n            \"genre\": \"Animation\"\n        },\n        {\n            \"id\": 128,\n            \"title\": \"Central Intelligence\",\n            \"sinopsis\": \"Non ea velit repudiandae non est. Laborum sit deserunt ducimus dolores qui ducimus et dolor. Eligendi assumenda sequi itaque ratione.\",\n            \"year\": 2024,\n            \"poster\": \"storage/images/m9.jpg\",\n            \"genre\": \"Sports\"\n        },\n        {\n            \"id\": 130,\n            \"title\": \"update jaka sembung\",\n            \"sinopsis\": \"ini adalah film yang di edit sama api,ini adalah film yang di edit sama api,ini adalah film yang di edit sama api\",\n            \"year\": 2023,\n            \"poster\": \"images/kjQFt5y0hI9mOwwFwkW3pvvWWAWu3TjSmYxReL2A.jpg\",\n            \"genre\": \"Adventure\"\n        },\n        {\n            \"id\": 131,\n            \"title\": \"Jaka Sembung 2\",\n            \"sinopsis\": \"Lorem ipsum dolor sit amet, consectetur adip Lorem ipsum dolor sit am Jaka Sembung issssss\",\n            \"year\": 2022,\n            \"poster\": \"images/GdatNy7hYI8y1KGNxcYQufoNA5A86jbAiCZvyHoV.jpg\",\n            \"genre\": \"Crime\"\n        },\n        {\n            \"id\": 132,\n            \"title\": \"Jaka Sembung 2\",\n            \"sinopsis\": \"Lorem ipsum dolor sit amet, consectetur adip Lorem ipsum dolor sit am Jaka Sembung issssss\",\n            \"year\": 2022,\n            \"poster\": \"images/X7F56HJppdNNIs1TbIc7TbON2dRyhnlGYb8DSbOv.jpg\",\n            \"genre\": \"Crime\"\n        },\n        {\n            \"id\": 133,\n            \"title\": \"Jaka Sembung 2\",\n            \"sinopsis\": \"Lorem ipsum dolor sit amet, consectetur adip Lorem ipsum dolor sit am Jaka Sembung issssss\",\n            \"year\": 2022,\n            \"poster\": \"images/p7nelstGfn95hULnZPciK9Y0NQcN67FFWydflqnt.jpg\",\n            \"genre\": \"Crime\"\n        },\n        {\n            \"id\": 134,\n            \"title\": \"Jaka Sembung 2\",\n            \"sinopsis\": \"Lorem ipsum dolor sit amet, consectetur adip Lorem ipsum dolor sit am Jaka Sembung issssss\",\n            \"year\": 2022,\n            \"poster\": \"images/9IM6K8NenmcVYQXXnMrRk6nYuVFkNMWzvRuiyGHI.jpg\",\n            \"genre\": \"Crime\"\n        },\n        {\n            \"id\": 135,\n            \"title\": \"Jaka Sembung 2\",\n            \"sinopsis\": \"Lorem ipsum dolor sit amet, consectetur adip Lorem ipsum dolor sit am Jaka Sembung issssss\",\n            \"year\": 2022,\n            \"poster\": \"images/EKL61e2ajnZdnZwQt0jgf71TwpjpWL1Cdse55X25.jpg\",\n            \"genre\": \"Crime\"\n        },\n        {\n            \"id\": 136,\n            \"title\": \"Jaka Sembung 2\",\n            \"sinopsis\": \"Lorem ipsum dolor sit amet, consectetur adip Lorem ipsum dolor sit am Jaka Sembung issssss\",\n            \"year\": 2022,\n            \"poster\": \"images/Qled2jEuBTttab6jVOnn3HD4jGtKMED3Gey5141x.jpg\",\n            \"genre\": \"Crime\"\n        },\n        {\n            \"id\": 138,\n            \"title\": \"Jaka Sembung 2\",\n            \"sinopsis\": \"Lorem ipsum dolor sit amet, consectetur adip Lorem ipsum dolor sit am Jaka Sembung issssss\",\n            \"year\": 2022,\n            \"poster\": \"images/sA3VSOrOyej2ERJw6RNCaBauiAmdE4ZSYerCAt9r.jpg\",\n            \"genre\": \"Crime\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "get Movie By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{protocol}}://{{host}}:{{port}}/api/movies/{{filmId}}",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"api",
+						"movies",
+						"{{filmId}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get Movie By Id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{protocol}}://{{host}}:{{port}}/api/movies/{{filmId}}",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"movies",
+								"{{filmId}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 09 Aug 2024 01:22:41 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 09 Aug 2024 01:22:41 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.4"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": {\n        \"id\": 138,\n        \"title\": \"Jaka Sembung 2\",\n        \"sinopsis\": \"Lorem ipsum dolor sit amet, consectetur adip Lorem ipsum dolor sit am Jaka Sembung issssss\",\n        \"year\": 2022,\n        \"poster\": \"images/sA3VSOrOyej2ERJw6RNCaBauiAmdE4ZSYerCAt9r.jpg\",\n        \"genre\": \"Crime\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Movie",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Key",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "update jaka sembung",
+							"type": "text"
+						},
+						{
+							"key": "poster",
+							"type": "file",
+							"src": "postman-cloud:///1ef55a5f-ede4-48c0-b729-c2bfb8cca35a"
+						},
+						{
+							"key": "sinopsis",
+							"value": "ini adalah film yang di edit sama api,ini adalah film yang di edit sama api,ini adalah film yang di edit sama api",
+							"type": "text"
+						},
+						{
+							"key": "year",
+							"value": "2023",
+							"type": "text"
+						},
+						{
+							"key": "genre_id",
+							"value": "9",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{protocol}}://{{host}}:{{port}}/api/movies/{{filmId}}?_method=PUT",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"api",
+						"movies",
+						"{{filmId}}"
+					],
+					"query": [
+						{
+							"key": "_method",
+							"value": "PUT"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update Movie",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Key",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "update jaka sembung",
+									"type": "text"
+								},
+								{
+									"key": "poster",
+									"type": "file",
+									"src": "postman-cloud:///1ef55a5f-ede4-48c0-b729-c2bfb8cca35a"
+								},
+								{
+									"key": "sinopsis",
+									"value": "ini adalah film yang di edit sama api,ini adalah film yang di edit sama api,ini adalah film yang di edit sama api",
+									"type": "text"
+								},
+								{
+									"key": "year",
+									"value": "2023",
+									"type": "text"
+								},
+								{
+									"key": "genre_id",
+									"value": "9",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{protocol}}://{{host}}:{{port}}/api/movies/{{filmId}}?_method=PUT",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"movies",
+								"{{filmId}}"
+							],
+							"query": [
+								{
+									"key": "_method",
+									"value": "PUT"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 09 Aug 2024 01:22:49 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 09 Aug 2024 01:22:49 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.4"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": \"Film Update Successful\",\n    \"message\": 201\n}"
+				}
+			]
+		},
+		{
+			"name": "delete Movie Id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{protocol}}://{{host}}:{{port}}/api/movies/{{filmId}}",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"api",
+						"movies",
+						"{{filmId}}"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "delete Movie Id",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{protocol}}://{{host}}:{{port}}/api/movies/{{filmId}}",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"movies",
+								"{{filmId}}"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 09 Aug 2024 01:22:59 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 09 Aug 2024 01:22:59 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.4"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"data\": \"Film Delete Successful\",\n    \"message\": 204\n}"
+				}
+			]
+		}
+	]
+}
